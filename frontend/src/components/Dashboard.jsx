@@ -36,6 +36,26 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(null);
 
+const fetchUserTransactions = async (userId) => {
+        try {
+            const response = await axios.get(`http://localhost:3001/api/transactions/${userId}`);
+            setTransactions(response.data); // Update transactions for the specific user
+            localStorage.setItem('transactions', JSON.stringify(response.data)); // Store transactions in local storage
+        } catch (error) {
+            console.error('Error fetching user transactions:', error);
+            alert('Failed to fetch user transactions. Please try again.');
+        }
+    };
+
+    // Load transactions from local storage or fetch from backend
+    useEffect(() => {
+        const storedTransactions = localStorage.getItem('transactions');
+        if (storedTransactions) {
+            setTransactions(JSON.parse(storedTransactions)); // Load transactions from local storage
+        } else if (userId) {
+            fetchUserTransactions(userId); // Fetch from backend if not in local storage
+        }
+    }, [userId]);
 
 
 
