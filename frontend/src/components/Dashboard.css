@@ -1,0 +1,333 @@
+/* Dashboard Container */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar and main content ratio */
+  grid-gap: 20px;
+  padding: 20px;
+  background-color: #edf2f7; /* Light grey background for dashboard */
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif; /* Clean and professional font */
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1e2a38; /* Darker blue-grey for sidebar */
+  padding: 20px;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2e3d4f; /* Subtle divider */
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #e5e9ec; /* Softer text color for readability */
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #4caf50; /* Modern green accent */
+  color: #ffffff;
+}
+
+/* Main Content Area */
+.main-content1 {
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Dashboard Heading */
+.main-content h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2d3748; /* Modern dark grey */
+  border-bottom: 3px solid #f4f5f7; /* Subtle divider */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+  background-color: #f9fafb; /* Off-white card background */
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+
+.cards-container {
+  display: flex; /* Aligns items in a row */
+  justify-content: space-between; /* Adds space between the cards */
+  gap: 20px; /* Adds a gap between the cards */
+  margin: 20px 0;
+}
+
+.card1 {
+  background-color: violet;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Elevation effect */
+  text-align: center;
+  width: 300px; /* Fixed width for consistent card sizes */
+}
+.card2 {
+  background-color: lightseagreen;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Elevation effect */
+  text-align: center;
+  width: 300px; /* Fixed width for consistent card sizes */
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px); /* Interactive hover effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 18px;
+  color: #4a5568; /* Softer grey for text */
+  margin-top: 10px;
+}
+
+/* Button Styling */
+.button {
+  display: inline-block;
+  background-color: #4caf50; /* Primary button color */
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-color: #45a049;
+}
+
+
+/* Logout Button Container */
+.logout-container {
+  align-self: flex-end; /* Ensures logout button sticks to the bottom */
+  margin-top: 100px; /* Adjusted margin-top value */
+}
+/* Logout Button */
+.logout-button {
+  background-color: red; /* Red logout button color */
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+      grid-template-columns: 1fr; /* Stack sidebar and main content */
+  }
+
+  .main-content {
+      padding: 15px;
+  }
+
+  .sidebar {
+      text-align: center;
+  }
+
+  .sidebar ul li {
+      margin: 10px 0;
+  }
+}
+
+
+/* AddTransaction.css */
+.transaction-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.transaction-form-container h2 {
+  color: black;
+  text-decoration: none;
+}
+
+.transaction-form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.transaction-form-container input {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.transaction-form-container input:focus {
+  border-color: #4CAF50;
+}
+
+.transaction-form-container button {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-form-container button:hover {
+  background-color: #45a049;
+}
+
+
+/*Table css*/
+
+.dashboard-container {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table thead th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+table tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+p {
+  color: #666;
+  text-align: center;
+  font-style: italic;
+}
+/*for edit and delete button*/
+button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+button:nth-child(1) { /* Styling for the Edit button */
+  background-color: #4CAF50;
+  color: white;
+}
+
+button:nth-child(1):hover {
+  background-color: #45A049;
+}
+
+button:nth-child(2) { /* Styling for the Delete button */
+  background-color: #F44336;
+  color: white;
+}
+
+button:nth-child(2):hover {
+  background-color: #E53935;
+}
