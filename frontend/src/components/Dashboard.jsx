@@ -224,22 +224,22 @@ const fetchUserTransactions = async (userId) => {
         <ul>
           <li>
             <button onClick={toggleExpenseChart} className="button">
-              {showExpenses ? "Hide Expenses" : "Show Expenses"}
+              Expenses
             </button>
           </li>
           <li>
             <button onClick={toggleIncomeChart} className="button">
-              {showIncome ? "Hide Income" : "Show Income"}
+              Income 
             </button>
           </li>
           <li>
             <button onClick={toggleAddTransaction} className="button">
-              {showAddTransaction ? "Hide Add Transaction" : "Show Add Transaction"}
+              Add Transaction 
             </button>
           </li>
           <li>
             <button onClick={toggleViewTransaction} className="button">
-              {showViewTransaction ? "Hide View Transaction" : "Show View Transaction"}
+              View Transaction 
             </button>
           </li>
 
